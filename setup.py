@@ -13,7 +13,7 @@ if sys.argv[-1] == 'publish':
 
 setup(
     name='sentry-sso-google',
-    version='1.0',
+    version='1.1',
     description='Google SSO support for Sentry',
     author='Educreations Engineering',
     author_email='engineering@educreations.com',

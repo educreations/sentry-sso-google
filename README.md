@@ -4,6 +4,8 @@ Google SSO support for Sentry 7.5 and above.
 
 ## Usage
 
+Add `sentry_sso_google` to your Sentry config's `INSTALLED_APPS`.
+
 The following settings are required to be in your Sentry configuration. You can create a new project in the [Developers Console][dev-console]. From there, go to APIs & Auth, Credentials and get the credentials for a web application.
 
 - `GOOGLE_OAUTH2_CLIENT_ID`
