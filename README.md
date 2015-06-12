@@ -17,6 +17,10 @@ You can limit who can sign into Sentry using this provider by setting the `GOOGL
 GOOGLE_WHITE_LISTED_DOMAINS = ['educreations.com']
 ```
 
+Go to the 'Auth' section of your organization's settings.
+
+Click the 'Configure' next to 'Google'.
+
 ## Copyright
 
 Copyright © 2015, Educreations, Inc under the MIT software license. See LICENSE for more information.
