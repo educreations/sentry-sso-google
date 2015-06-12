@@ -19,10 +19,12 @@ class FetchProfileView(AuthView):
         r.raise_for_status()
         profile = r.json()
         domain = profile.get('hd')
-        if not domain:
-            return helper.error('User has no Google apps domain')
-        if domain not in settings.GOOGLE_WHITE_LISTED_DOMAINS:
-            return helper.error('Google apps domain not in whitelist')
+        domains = getattr(settings, 'GOOGLE_WHITE_LISTED_DOMAINS', [])
+        if domains:
+            if not domain:
+                return helper.error('User has no Google apps domain')
+            if domain not in domains:
+                return helper.error('Google apps domain not in whitelist')
         helper.bind_state('profile', profile)
         return helper.next_step()
 
