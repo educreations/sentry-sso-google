@@ -18,7 +18,7 @@ setup(
     author='Educreations Engineering',
     author_email='engineering@educreations.com',
     url='https://github.com/educreations/sentry-sso-google',
-    install_requires=['sentry'],
+    install_requires=['sentry>=7.5'],
     packages=["sentry_sso_google"],
     license="MIT",
 )
