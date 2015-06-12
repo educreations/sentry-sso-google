@@ -1,6 +1,6 @@
 # sentry-sso-google
 
-Google SSO support for Sentry
+Google SSO support for Sentry 7.5 and above.
 
 ## Usage
 
@@ -9,7 +9,7 @@ The following settings are required to be in your Sentry configuration. You can 
 - `GOOGLE_OAUTH2_CLIENT_ID`
 - `GOOGLE_OAUTH2_CLIENT_SECRET`
 
-You can limit who can sign into sentry using this provider by setting the `GOOGLE_WHITE_LISTED_DOMAINS` to a list of allowed domains. For example, to limit to `educreations.com` users, one could do:
+You can limit who can sign into Sentry using this provider by setting the `GOOGLE_WHITE_LISTED_DOMAINS` to a list of allowed domains. For example, to limit to `educreations.com` users, one could do:
 
 ```python
 GOOGLE_WHITE_LISTED_DOMAINS = ['educreations.com']
