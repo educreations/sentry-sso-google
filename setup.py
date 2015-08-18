@@ -11,10 +11,15 @@ if sys.argv[-1] == 'publish':
     sys.exit()
 
 
+with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as f:
+    readme = f.read()
+
+
 setup(
     name='sentry-sso-google',
     version='1.1',
     description='Google SSO support for Sentry',
+    long_description=readme,
     author='Educreations Engineering',
     author_email='engineering@educreations.com',
     url='https://github.com/educreations/sentry-sso-google',
