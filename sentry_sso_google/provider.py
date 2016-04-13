@@ -18,13 +18,20 @@ class FetchProfileView(AuthView):
         r = requests.get(self.PROFILE_URL, params={'access_token': token})
         r.raise_for_status()
         profile = r.json()
+        email = profile.get('email')
         domain = profile.get('hd')
+        emails = getattr(settings, 'GOOGLE_WHITE_LISTED_EMAILS', [])
         domains = getattr(settings, 'GOOGLE_WHITE_LISTED_DOMAINS', [])
         if domains:
             if not domain:
                 return helper.error('User has no Google apps domain')
             if domain not in domains:
                 return helper.error('Google apps domain not in whitelist')
+        if emails:
+            if not email:
+                return helper.error('User has no email')
+            if email not in emails:
+                return helper.error('User email is not in whitelist')
         helper.bind_state('profile', profile)
         return helper.next_step()
 
