@@ -43,5 +43,5 @@ settings. Click the 'Configure' next to 'Google'.
 Copyright
 ---------
 
-Copyright © 2015, Educreations, Inc under the MIT software license. See
+Copyright © 2016, Educreations, Inc under the MIT software license. See
 LICENSE for more information.
