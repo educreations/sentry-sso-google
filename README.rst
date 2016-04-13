@@ -25,9 +25,20 @@ example, to limit to ``educreations.com`` users, one could do:
 
     GOOGLE_WHITE_LISTED_DOMAINS = ['educreations.com']
 
-Go to the 'Auth' section of your organization's settings.
+Instead, or, in addition, you can limit only certain emails to log in
+using the ``GOOGLE_WHITE_LISTED_EMAILS`` setting. The setting should be
+a list of emails that are checked. For example, to limit to a few users,
+one could do:
 
-Click the 'Configure' next to 'Google'.
+.. code:: python
+
+    GOOGLE_WHITE_LISTED_EMAILS = [
+        'chris.streeter@educreations.com',
+        'corey.farwell@educreations.com',
+    ]
+
+Once deployed, go to the 'Auth' section of your organization's sentry
+settings. Click the 'Configure' next to 'Google'.
 
 Copyright
 ---------
