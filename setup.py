@@ -17,7 +17,7 @@ with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as f:
 
 setup(
     name='sentry-sso-google',
-    version='1.1.1',
+    version='1.2',
     description='Google SSO support for Sentry',
     long_description=readme,
     author='Educreations Engineering',
